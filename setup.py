@@ -37,7 +37,7 @@ def get_version(pkg):
 
 setup(name='django-better-image',
       version=get_version('django_better_image'),
-      description='Library for creating HTML listing / table / data grid',
+      description='Better Django ImageField',
       long_description=long_description,
       classifiers=[
           "Intended Audience :: Developers",
