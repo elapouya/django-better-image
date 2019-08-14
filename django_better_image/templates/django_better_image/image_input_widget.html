@@ -1,0 +1,112 @@
+{% block container-params %}
+<div class="better-image-widget-container"
+     data-field-name="{{ widget.name }}"
+     data-upload-params="{{ widget.serialized_data }}"
+     data-upload-params-chk="{{ widget.serialized_data_chk }}"
+     data-saved-tooltip="{{ widget.image_saved_message }}"
+     data-cleared-tooltip="{{ widget.image_cleared_message }}"
+     data-remember-tooltip="{{ widget.remember_to_save_message }}"
+     data-aspect-ratio="{{ widget.thumb_aspect_ratio }}"
+     data-crop-on-upload="{{ widget.crop_on_upload }}"
+     data-dz-thumb-width="{{ widget.dropzone_thumb_size.0 }}"
+     data-dz-thumb-height="{{ widget.dropzone_thumb_size.1 }}"
+     data-autocrop-area="{{ widget.crop_auto_select }}"
+>
+{% endblock %}
+<div class="flex-container buttons-{{ widget.buttons_placement }}">
+    {% if widget.is_initial %}
+        {% block image-already-uploaded %}
+        <img class="thumb {{ widget.name }}"
+             src="{{ widget.thumb.url }}"
+             data-img-processing="{{ widget.image_processing_message }}"
+             data-image-url="{{ widget.crop_image.url }}"
+             style="max-width: {{ widget.form_thumb_max_size.0 }}px;
+                    max-height: {{ widget.form_thumb_max_size.1 }}px;"
+        >
+        <div class="image-buttons">
+            {% block image-already-uploaded-buttons %}
+            {% if widget.clear_button_display %}
+                <button class="clear-button {{ widget.clear_button_class }}"
+                        data-confirm-msg="{{ widget.clear_confirm_message }}"
+                        data-post-url="{{ widget.clear_url }}" {% if widget.buttons_no_label %}title="{{ widget.clear_button_label }}"{% endif %}>
+                    {% if widget.clear_button_icon %}<span class="{{ widget.clear_button_icon }}"></span>{% endif %}
+                    {% if not widget.buttons_no_label %}<span class="label">{{ widget.clear_button_label }}</span>{% endif %}</button>
+            {% endif %}
+            {% if widget.edit_button_display %}
+                <button class="edit-button {{ widget.edit_button_class }}"
+                        data-post-url="{{ widget.edit_url }}" {% if widget.buttons_no_label %}title="{{ widget.edit_button_label }}"{% endif %}>
+                    {% if widget.edit_button_icon %}<span class="{{ widget.edit_button_icon }}"></span>{% endif %}
+                    {% if not widget.buttons_no_label %}<span class="label">{{ widget.edit_button_label }}</span>{% endif %}</button>
+            {% endif %}
+            {% if widget.fullsize_button_display %}
+                <a href="{{ widget.value.url }}" class="{{ widget.fullsize_button_class }}"
+                   target="_blank" {% if widget.buttons_no_label %}title="{{ widget.fullsize_button_label }}"{% endif %}>
+                    {% if widget.edit_button_icon %}<span class="{{ widget.fullsize_button_icon }}"></span>{% endif %}
+                    {% if not widget.buttons_no_label %}<span class="label">{{ widget.fullsize_button_label }}</span>{% endif %}</a>
+            {% endif %}
+            {% endblock %}
+        </div>
+        {% endblock %}
+    {% else %}
+        {% block no-image-yet %}
+        {% if widget.instance.pk and widget.use_dropzone %}
+            {% if not widget.field_ref %}
+                <div class="alert alert-danger" role="alert">
+                    {{ widget.field_ref_errmsg }}
+                </div>
+            {% else %}
+                {% block dropzone %}
+                <div class="dropzone"
+                     action="{% url "settings" %}"
+                     id="{{ widget.name }}-dz"
+                     data-post-url="{{ widget.upload_url }}">
+                    <div class="dz-message"><div class="dz-message-inner"
+                         style="width: {{ widget.dropzone_size.0 }}px;
+                                height: {{ widget.dropzone_size.1 }}px;">
+                        {{ widget.dz_message|safe }}</div></div>
+                </div>
+                {% endblock %}
+            {% endif %}
+        {% else %}
+            {% block no-image-yet-upload %}
+            <button class="upload-button {{ widget.upload_button_class }}"
+                    data-reupload-class="{{ widget.reupload_button_class }}"
+            >
+                {% if widget.upload_button_icon %}
+                    <span class="upload-icon {{ widget.upload_button_icon }}"
+                          data-reupload-icon="{{ widget.reupload_button_icon }}"></span>
+                {% endif %}
+                <span class="upload-label"
+                      data-reupload-label="{{ widget.reupload_button_label }}">
+                    {{ widget.upload_button_label }}</span></button>
+            <input name="{{ widget.name }}" class='input-file' type="file">
+            <input name="{{ widget.name }}__data" class="image-data" value="" type="hidden">
+            <img src="" class="hidden upload-image" alt="Uploaded file"
+                 style="max-width: {{ widget.form_thumb_max_size.0 }}px;
+                        max-height: {{ widget.form_thumb_max_size.1 }}px;"
+            >
+            <div class="hidden crop-preview"
+                 style="width: {{ widget.form_thumb_max_size.0 }}px;
+                        height: {{ widget.form_thumb_max_size.1 }}px;"></div>
+            <div class="image-buttons hidden">
+                {% block no-image-yet-upload-buttons %}
+                {% if widget.clear_button_display %}
+                    <button class="clear-button {{ widget.clear_button_class }}"
+                            {% if widget.buttons_no_label %}title="{{ widget.clear_button_label }}"{% endif %}>
+                        {% if widget.clear_button_icon %}<span class="{{ widget.clear_button_icon }}"></span>{% endif %}
+                        {% if not widget.buttons_no_label %}<span class="label">{{ widget.clear_button_label }}</span>{% endif %}</button>
+                {% endif %}
+                {% if widget.edit_button_display %}
+                    <button class="edit-button {{ widget.edit_button_class }}"
+                            {% if widget.buttons_no_label %}title="{{ widget.edit_button_label }}"{% endif %}>
+                        {% if widget.edit_button_icon %}<span class="{{ widget.edit_button_icon }}"></span>{% endif %}
+                        {% if not widget.buttons_no_label %}<span class="label">{{ widget.edit_button_label }}</span>{% endif %}</button>
+                {% endif %}
+                {% endblock %}
+            </div>
+            {% endblock %}
+        {% endif %}
+        {% endblock %}
+    {% endif %}
+    </div>
+</div>
