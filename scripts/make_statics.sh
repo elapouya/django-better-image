@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# To be run *in* scripts dir
+# To be run *in* "scripts" dir
 # uses yui-compressor, closure compiler and sass :
 # download compiler .jar here : https://github.com/google/closure-compiler
 # sudo apt install yui-compressor

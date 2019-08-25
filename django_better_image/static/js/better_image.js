@@ -7,7 +7,7 @@
  */
 (function ( $ ) {
 
-    var csrftoken = getCookie('csrftoken');
+    var csrftoken = Cookies.get('csrftoken');
 
     function betterImageCropDialog(widget_container, image_url, handler) {
         // set message
