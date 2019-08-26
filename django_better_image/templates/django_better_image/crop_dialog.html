@@ -1,0 +1,101 @@
+{% load i18n %}
+<div class="modal fade" id="BetterImageCropDialogModal" tabindex="-1"
+     role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none">
+                <h5 class="modal-title">{% trans "Edit picture" %}</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body-crop">
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-group action-group">
+                    <div class="cropper-button-group">
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="zoom-in"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Zoom In" %}"><span
+                                class="icon-zoom-in"></span></button>
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="zoom-out"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Zoom Out" %}"><span
+                                class="icon-zoom-out"></span></button>
+                    </div>
+                    <div class="cropper-button-group">
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="rotate-left"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Rotate Left" %}"><span
+                                class="icon-ccw-1"></span></button>
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="rotate-right"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Rotate Right" %}"><span
+                                class="icon-cw-1"></span></button>
+                    </div>
+                    <div class="cropper-button-group">
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="flip-horizontal"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Flip Horizontal" %}"><span
+                                class="icon-resize-horizontal"></span></button>
+                        <button type="button"
+                                class="btn btn-info"
+                                data-action="flip-vertical"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Flip Vertical" %}"><span
+                                class="icon-resize-vertical"></span></button>
+                    </div>
+                    <div class="cropper-button-group">
+                        <button type="button"
+                                class="btn btn-success"
+                                data-action="crop"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Crop mode" %}"><span
+                                class="icon-crop"></span></button>
+                        <button type="button"
+                                class="btn btn-default"
+                                data-action="move"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="{% trans "Move mode" %}"><span
+                                class="icon-move"></span></button>
+                    </div>
+                    <button type="button"
+                            class="btn btn-warning btn-wide"
+                            data-action="reset"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="{% trans "Reset" %}"><span
+                            class="icon-arrows-cw"></span></button>
+                </div>
+                <div class="modal-footer-group submit-group">
+                    <button type="button"
+                            class="btn btn-secondary btn-no btn-wide"
+                            data-dismiss="modal">{% trans "Cancel" %}</button>
+                    <button type="button"
+                            class="btn btn-primary btn-yes btn-wide crop-save-button"
+                            data-save-label="{% trans "save" %}"
+                            data-crop-label="{% trans "crop" %}">{% trans "save" %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
