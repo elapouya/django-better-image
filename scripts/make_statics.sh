@@ -37,5 +37,13 @@ then
     set -x
     rm -f $JSDIR/better_image.min.js
     $JS_COMPRESS $JSDIR/better_image.js > $JSDIR/better_image.min.js
+
+    rm $JSDIR/modal-tooltip.js
+    cat $JSDIR/util.js >> $JSDIR/modal-tooltip.js
+    cat $JSDIR/popover.js >> $JSDIR/modal-tooltip.js
+    cat $JSDIR/tooltip.js >> $JSDIR/modal-tooltip.js
+    cat $JSDIR/modal.js >> $JSDIR/modal-tooltip.js
+    $JS_COMPRESS $JSDIR/modal-tooltip.js > $JSDIR/modal-tooltip.min.js
+
     set +x
 fi
