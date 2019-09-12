@@ -10,8 +10,8 @@
 # sudo gem install rb-inotify
 
 BETTERIMAGEDIR=$(dirname $0)/../django_better_image
-CSSDIR=$BETTERIMAGEDIR/static/css
-JSDIR=$BETTERIMAGEDIR/static/js
+CSSDIR=$BETTERIMAGEDIR/static/django_better_image/css
+JSDIR=$BETTERIMAGEDIR/static/django_better_image/js
 
 BETTERIMAGE_SCSS=$CSSDIR/better_image.scss
 BETTERIMAGE_CSS=$CSSDIR/better_image.css
