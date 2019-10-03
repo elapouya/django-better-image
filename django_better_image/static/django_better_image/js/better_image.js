@@ -327,7 +327,7 @@
                 }
                 let confirm_msg = clear_button.attr('data-confirm-msg');
                 if (!confirm_msg) confirm_msg = 'Do you confirm ?';
-                bootstrapConfirmDialog(confirm_msg, function (ok) {
+                djModalsConfirm(confirm_msg, function (ok) {
                     if (ok) {
                         data = {
                             csrfmiddlewaretoken: csrftoken,
@@ -439,7 +439,7 @@
         img_thumb.on('drop', function (event) {
             event.preventDefault();
             event.stopPropagation();
-            bootstrapAlert('Please clear image first');
+            djModalsAlert('Please clear image first');
         });
         img_thumb.on('dragover dragleave', function (event) {
             event.preventDefault();

@@ -27,7 +27,8 @@ class BetterImageBaseView(View):
             data = self.get_data()
             return JsonResponse(data)
         except ValidationError as e:
-            return HttpResponseBadRequest(e.message.encode('utf-8'))
+            message = str(e.message) or ', '.join(e.messages)
+            return HttpResponseBadRequest(message.encode('utf-8'))
         except Exception as e:
             if settings.DEBUG:
                 import traceback
