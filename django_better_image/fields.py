@@ -1,6 +1,7 @@
 # 2019-08-14 : Created by Eric Lapouyade
 
 from django.db import models
+from imagekit.models import ProcessedImageField
 from .formfields import BetterImageFormField
 
 
@@ -23,6 +24,32 @@ class BetterImageField(models.ImageField):
         name, path, args, kwargs = super().deconstruct()
         kwargs.update(self.formfield_params)
         return name, path, args, kwargs
+
+
+class BetterProcessedImageField(ProcessedImageField):
+    def __init__(self, verbose_name=None, name=None, **kwargs):
+        formfield_params_keys = BetterImageFormField.get_params_keys()
+        self.formfield_params = { k:kwargs.pop(k)
+                                  for k in formfield_params_keys
+                                  if k in kwargs }
+        processors = kwargs.pop('processors',None)
+        format = kwargs.pop('format',None)
+        options = kwargs.pop('options',None)
+        super().__init__(processors, format, options,
+                         verbose_name, name, **kwargs)
+
+    def formfield(self, **kwargs):
+        params = { **self.formfield_params, **kwargs }
+        return super().formfield(**{
+            'form_class': BetterImageFormField,
+            **params,
+        })
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        kwargs.update(self.formfield_params)
+        return name, path, args, kwargs
+
 
 class BetterImageOriginalField(models.ImageField):
     def formfield(self, **kwargs):

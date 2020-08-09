@@ -62,6 +62,7 @@ setup(name='django-better-image',
       packages=find_packages(exclude=['tests.*','tests','docs.*','docs']),
       package_data={'': ['*.png',],},
       install_requires=['django>=2',
+                        'django-imagekit',
                         'pillow',],
       extras_require={
         'tests' : [],
