@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-04 19:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:7
+msgid "Edit picture"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:23
+msgid "Zoom In"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:30
+msgid "Zoom Out"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:39
+msgid "Rotate Left"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:46
+msgid "Rotate Right"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:55
+msgid "Flip Horizontal"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:62
+msgid "Flip Vertical"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:71
+msgid "Crop mode"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:78
+msgid "Move mode"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:86
+msgid "Reset"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:92
+msgid "Cancel"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:95
+#: django_better_image/templates/django_better_image/crop_dialog.html:96
+msgid "save"
+msgstr ""
+
+#: django_better_image/templates/django_better_image/crop_dialog.html:96
+msgid "crop"
+msgstr ""
+
+#: django_better_image/views.py:44
+msgid "Upload params missing"
+msgstr ""
+
+#: django_better_image/views.py:49
+msgid "Upload params corrupted"
+msgstr ""
+
+#: django_better_image/views.py:58
+msgid "Some parameters are missing while uploading image"
+msgstr ""
+
+#: django_better_image/views.py:63
+msgid "Image destination app/model incorrect"
+msgstr ""
+
+#: django_better_image/views.py:68
+#, python-brace-format
+msgid "{model_name} #{pk} does not exist"
+msgstr ""
+
+#: django_better_image/views.py:74
+#, python-format
+msgid "Bad field reference : %s"
+msgstr ""
+
+#: django_better_image/views.py:77
+#, python-brace-format
+msgid "{model_name} has no field {field_name}"
+msgstr ""
+
+#: django_better_image/views.py:84
+#, python-brace-format
+msgid "{field_name} does not exist in {form_name}"
+msgstr ""
+
+#: django_better_image/views.py:89
+#, python-format
+msgid "Please use the BetterImageFormMixin in %s"
+msgstr ""
+
+#: django_better_image/views.py:103
+#, python-brace-format
+msgid "No \"{field_name}\" in posted files"
+msgstr ""
+
+#: django_better_image/views.py:132
+#, python-brace-format
+msgid "{field_name} has no image set."
+msgstr ""
+
+#: django_better_image/widgets.py:14
+msgid "drag & drop<br>or click here to<br>upload an image"
+msgstr ""
+
+#: django_better_image/widgets.py:15
+msgid ""
+"Please add \"BetterImageFormMixin\" in your modelForm (see documentation)."
+msgstr ""
+
+#: django_better_image/widgets.py:20
+msgid "Edit"
+msgstr ""
+
+#: django_better_image/widgets.py:24
+msgid "Clear"
+msgstr ""
+
+#: django_better_image/widgets.py:27
+#, python-brace-format
+msgid "Do you want to clear the field {field_label} ?"
+msgstr ""
+
+#: django_better_image/widgets.py:29
+msgid "Choose an image..."
+msgstr ""
+
+#: django_better_image/widgets.py:32
+msgid "Full size"
+msgstr ""
+
+#: django_better_image/widgets.py:36
+msgid "The image has been saved on the server"
+msgstr ""
+
+#: django_better_image/widgets.py:37
+msgid "The image has been cleared on the server"
+msgstr ""
+
+#: django_better_image/widgets.py:38
+msgid ""
+"The image is being processed...<br><span class=\"icon-spin4 animate-spin\"></"
+"span>"
+msgstr ""
+
+#: django_better_image/widgets.py:40
+msgid "Remember to save the form"
+msgstr ""
