@@ -20,129 +20,130 @@ msgstr ""
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:7
 msgid "Edit picture"
-msgstr ""
+msgstr "Modifier l'image"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:23
 msgid "Zoom In"
-msgstr ""
+msgstr "Zoomer"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:30
 msgid "Zoom Out"
-msgstr ""
+msgstr "Dé-zoomer"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:39
 msgid "Rotate Left"
-msgstr ""
+msgstr "Tourner à gauche"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:46
 msgid "Rotate Right"
-msgstr ""
+msgstr "Tourner à droite"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:55
 msgid "Flip Horizontal"
-msgstr ""
+msgstr "Mirroir Horizontal"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:62
 msgid "Flip Vertical"
-msgstr ""
+msgstr "Mirroir Vertical"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:71
 msgid "Crop mode"
-msgstr ""
+msgstr "Mode découpage"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:78
 msgid "Move mode"
-msgstr ""
+msgstr "Mode déplacement"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:86
 msgid "Reset"
-msgstr ""
+msgstr "Remise à zéro"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:92
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:95
 #: django_better_image/templates/django_better_image/crop_dialog.html:96
 msgid "save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: django_better_image/templates/django_better_image/crop_dialog.html:96
 msgid "crop"
-msgstr ""
+msgstr "découper"
 
 #: django_better_image/views.py:44
 msgid "Upload params missing"
-msgstr ""
+msgstr "Paramètres d'upload manquants"
 
 #: django_better_image/views.py:49
 msgid "Upload params corrupted"
-msgstr ""
+msgstr "Paramètres d'upload corrompus"
 
 #: django_better_image/views.py:58
 msgid "Some parameters are missing while uploading image"
-msgstr ""
+msgstr "Des paramètres sont manquants durant l'upload"
 
 #: django_better_image/views.py:63
 msgid "Image destination app/model incorrect"
-msgstr ""
+msgstr "Image destination app/model incorrecte"
 
 #: django_better_image/views.py:68
 #, python-brace-format
 msgid "{model_name} #{pk} does not exist"
-msgstr ""
+msgstr "{model_name} #{pk} n'existe pas"
 
 #: django_better_image/views.py:74
 #, python-format
 msgid "Bad field reference : %s"
-msgstr ""
+msgstr "Mauvaise référence de champ : %s"
 
 #: django_better_image/views.py:77
 #, python-brace-format
 msgid "{model_name} has no field {field_name}"
-msgstr ""
+msgstr "{model_name} n'a pas de champ {field_name}"
 
 #: django_better_image/views.py:84
 #, python-brace-format
 msgid "{field_name} does not exist in {form_name}"
-msgstr ""
+msgstr "{field_name} n'existe pas dans {form_name}"
 
 #: django_better_image/views.py:89
 #, python-format
 msgid "Please use the BetterImageFormMixin in %s"
-msgstr ""
+msgstr "Merci d'utiliser BetterImageFormMixin dans %s"
 
 #: django_better_image/views.py:103
 #, python-brace-format
 msgid "No \"{field_name}\" in posted files"
-msgstr ""
+msgstr "Pas de \"{field_name}\" dans les fichiers postés"
 
 #: django_better_image/views.py:132
 #, python-brace-format
 msgid "{field_name} has no image set."
-msgstr ""
+msgstr "{field_name} n'a pas d'image set."
 
 #: django_better_image/widgets.py:14
 msgid "drag & drop<br>or click here to<br>upload an image"
-msgstr ""
+msgstr "Glissez - Déposez<br>ou cliquez ici pour<br>téléverser une image"
 
 #: django_better_image/widgets.py:15
 msgid ""
 "Please add \"BetterImageFormMixin\" in your modelForm (see documentation)."
 msgstr ""
+"Merci d'ajouter \"BetterImageFormMixin\" à vore modelForm (voir documentation)."
 
 #: django_better_image/widgets.py:20
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: django_better_image/widgets.py:24
 msgid "Clear"
-msgstr ""
+msgstr "Effacer"
 
 #: django_better_image/widgets.py:27
 #, python-brace-format
 msgid "Do you want to clear the field {field_label} ?"
-msgstr ""
+msgstr "Voulez-vous effacer le champ {field_label} ?"
 
 #: django_better_image/widgets.py:29
 msgid "Choose an image..."
@@ -150,22 +151,24 @@ msgstr "Selectionner une image..."
 
 #: django_better_image/widgets.py:32
 msgid "Full size"
-msgstr ""
+msgstr "Plein format"
 
 #: django_better_image/widgets.py:36
 msgid "The image has been saved on the server"
-msgstr ""
+msgstr "L'image a été enregistrée sur le serveur"
 
 #: django_better_image/widgets.py:37
 msgid "The image has been cleared on the server"
-msgstr ""
+msgstr "L'image a été effacée du serveur"
 
 #: django_better_image/widgets.py:38
 msgid ""
 "The image is being processed...<br><span class=\"icon-spin4 animate-spin\"></"
 "span>"
 msgstr ""
+"L'image est en cours de traitement...<br><span class=\"icon-spin4 animate-spin\"></"
+"span>"
 
 #: django_better_image/widgets.py:40
 msgid "Remember to save the form"
-msgstr ""
+msgstr "N'oubliez-pas de valider le formulaire"
