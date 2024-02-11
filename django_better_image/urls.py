@@ -2,9 +2,11 @@
 
 from django.urls import re_path
 
-from .views import ( BetterImageClearView,
-                     BetterImageEditView,
-                     BetterImageUploadView )
+from .views import (
+    BetterImageClearView,
+    BetterImageEditView,
+    BetterImageUploadView,
+)
 
 urlpatterns = [
     re_path(r'^upload/$',
