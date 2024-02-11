@@ -1,4 +1,4 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 import os
 import re
 
@@ -59,10 +59,10 @@ setup(name='django-better-image',
       author='Eric Lapouyade',
       author_email='elapouya@gmail.com',
       license='LGPL 2.1',
-      packages=find_packages(exclude=['tests.*','tests','docs.*','docs']),
-      package_data={'': ['*.png',],},
-      install_requires=['django>=2',
-                        'pillow',],
+      packages=find_packages(exclude=['tests.*', 'tests', 'docs.*', 'docs']),
+      package_data={'': ['*.png', ], },
+      install_requires=['django>=3',
+                        'pillow', ],
       extras_require={
         'tests' : [],
         'docs': ['Sphinx', 'sphinxcontrib-napoleon'],
